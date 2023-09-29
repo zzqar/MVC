@@ -79,22 +79,7 @@ class TestController extends Controller
     ];
     public function index()
     {
-
-        if (empty($_SESSION['arr'])) {
-            $_SESSION['arr'] = $this->arr;
-        }
-
-        $y = array_rand($_SESSION['arr']);
-        $b = array_rand($_SESSION['arr']);
-
-
-        echo '<h1>' .  str_repeat('_', 100) . '</h1>';
-        echo '<h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' . $_SESSION['arr'][$y] . '&nbsp;&nbsp;&nbsp;&nbsp;' . $_SESSION['arr'][$b] . '</h1>';
-        echo '<h1>' .  str_repeat('_', 100) . '</h1>';
-
-        dump(...$_SESSION['arr']);
-
-        unset($_SESSION['arr'][$y], $_SESSION['arr'][$b]);
+        $isEnabled = apcu_enabled();
         exit();
         //return new ResponseJson();
 //        $bucket = (new RequestBucket())
