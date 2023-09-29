@@ -1,0 +1,26 @@
+{
+    "name": "zzqar/mvc-project",
+    "description": "my mvc project",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Core\\": "core",
+            "App\\": "app"
+        }
+    },
+    "authors": [
+        {
+            "name": "zzqar",
+            "email": "zzqar@vk.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "guzzlehttp/guzzle": "7.9.x-dev",
+        "twig/twig": "3.x-dev"
+    }
+    ,
+    "require-dev": {
+        "roave/security-advisories": "dev-latest"
+    }
+}
